@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXS-Y8-BT1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification Centre-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NotificationCentreViewController" customModule="Notification_Centre" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ub9-Np-Rog">
+                                <rect key="frame" x="154.5" y="432.5" width="105.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Counter"/>
+                                <connections>
+                                    <action selector="counterBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wf9-ev-SDE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dF-1s-CnK">
+                                <rect key="frame" x="334" y="90" width="54" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                <connections>
+                                    <action selector="nextBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Dv-TB-1Ez"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0dF-1s-CnK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="90" id="U3x-yj-gAp"/>
+                            <constraint firstItem="ub9-Np-Rog" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="W8E-tI-7rx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0dF-1s-CnK" secondAttribute="trailing" constant="26" id="m6Q-HQ-nXN"/>
+                            <constraint firstItem="ub9-Np-Rog" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uyi-LK-1O3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notification Centre" id="GbJ-VD-5y6"/>
+                    <connections>
+                        <outlet property="addCounterBtn" destination="ub9-Np-Rog" id="14Q-Cq-amb"/>
+                        <outlet property="nextBtn" destination="0dF-1s-CnK" id="Mxx-qy-qe0"/>
+                        <segue destination="amo-uK-xS9" kind="show" identifier="nextPageSegue" id="es5-7Y-tnZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13" y="84"/>
+        </scene>
+        <!--Counter View Controller-->
+        <scene sceneID="VOb-Sq-Qd1">
+            <objects>
+                <viewController id="amo-uK-xS9" customClass="CounterViewController" customModule="Notification_Centre" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dRU-4m-uVD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l23-A6-ClP">
+                                <rect key="frame" x="191.5" y="418" width="31" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QwS-og-mxb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="l23-A6-ClP" firstAttribute="centerX" secondItem="dRU-4m-uVD" secondAttribute="centerX" id="A8x-D3-VLb"/>
+                            <constraint firstItem="l23-A6-ClP" firstAttribute="centerY" secondItem="dRU-4m-uVD" secondAttribute="centerY" id="LXJ-p2-Sjg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zUL-9C-xmJ"/>
+                    <connections>
+                        <outlet property="counterLbl" destination="l23-A6-ClP" id="LMT-qu-5FC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aP4-Pi-4Yp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881" y="84"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aCp-2Q-w6l">
+            <objects>
+                <navigationController id="vXS-Y8-BT1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V3p-Yf-S2m">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="szZ-mW-LK5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZU-y9-nhi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13" y="-625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

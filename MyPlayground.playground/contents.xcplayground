@@ -16,6 +16,8 @@
         <page name='reverse_1to10'/>
         <page name='Swapping'/>
         <page name='Factorial'/>
-        <page name='Febonacci'/>
+        <page name='seperator'/>
+        <page name='Fibonacci'/>
+        <page name='sumOfArray'/>
     </pages>
 </playground>

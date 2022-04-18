@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleScrollView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmE-SM-fPS">
+                                <rect key="frame" x="20" y="44" width="374" height="448"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipE-Wp-jwO">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="448"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKb-S2-fKu">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="2260"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdr-8C-Exc">
+                                                        <rect key="frame" x="8" y="30" width="358" height="1826"/>
+                                                        <string key="text">A tab bar appears at the bottom of a screen, helping people understand the types of information or functionality an app provides. Tabs let people quickly switch between top-level sections in your app while preserving the current navigation state within each section.
+
+By default, a tab bar is translucent: It uses a background material only when content appears behind it, removing the material when the view scrolls to the bottom. A tab bar hides when a keyboard is onscreen. Use a tab bar only to enable navigation, not to help people perform actions. If you need to provide controls that act on elements in the current view, use a toolbar instead.
+
+Use the minimum number of tabs required to clarify your information hierarchy and help people navigate your app. Too many tabs reduce the tappable area of each tab and might increase the complexity of your interface. Too few tabs can lead to categories or modes that are too broad to be useful, requiring people to select a tab to find out what it contains. Although a More tab displays additional tabs, it requires an extra tap to reveal them and can be a poor use of space. In general, use three to five tabs on iPhone; use a few more on iPad if necessary.
+
+In an iPadOS app, consider using a sidebar instead of a tab bar. Because a sidebar can display a large number of items, it can make navigating an iPad app more efficient. You can also let people customize a sidebar’s items and let them hide it to make more room for content. For guidance, see Sidebars.
+
+Avoid hiding the tab bar when people navigate to different areas in your app. The tab bar is a global navigation control for your app, so make sure it’s always visible. The exception is a tab bar within a modal view. Because a modal view gives people a separate experience that they dismiss when they’re finished, hiding the view’s tab bar doesn’t affect app navigation.
+
+Avoid removing or disabling a tab when its content is unavailable. If tabs are enabled in some cases but not in others, your app’s interface might appear unstable and unpredictable. When necessary, explain why a tab’s content is unavailable. For example, even when there is no music on an iOS device, the Listen Now tab in the Music app remains available and offers suggestions for downloading music.
+
+Ensure that tabs affect the view that’s attached to the tab bar, not views elsewhere onscreen. For example, selecting a tab on the left side of a split view shouldn’t cause the right side of the split view to change. Similarly, selecting a tab in a popover shouldn’t change a view behind the popover.
+
+Use a badge to communicate unobtrusively. You can display a badge — a red oval containing white text and either a number or an exclamation point — on a tab to indicate that new information associated with that view or mode is available. For developer guidance, see UITabBarItem.
+
+Consider using SF symbols to provide scalable, visually consistent tab bar items. When you use SF symbols, tab bar items automatically adapt to different contexts. For example, the tab bar can be regular or compact, depending on the current device and orientation. Also, tab bar glyphs can appear above tab titles in portrait orientation, whereas in landscape, the glyphs and titles can appear side by side. Prefer filled symbols or glyphs for consistency with the platform. If your app uses a sidebar instead of a tab bar when it runs on iPad, switch the filled symbols or glyphs to the outlined variant in the sidebar. For guidance, see SF Symbols.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="Tdr-8C-Exc" secondAttribute="bottom" constant="404" id="cV7-BV-mxE"/>
+                                                    <constraint firstItem="Tdr-8C-Exc" firstAttribute="leading" secondItem="WKb-S2-fKu" secondAttribute="leading" constant="8" id="hBD-tN-jGm"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Tdr-8C-Exc" secondAttribute="trailing" constant="8" id="n1b-Fk-gO3"/>
+                                                    <constraint firstItem="Tdr-8C-Exc" firstAttribute="top" secondItem="WKb-S2-fKu" secondAttribute="top" constant="30" id="xP3-C9-n84"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="WKb-S2-fKu" firstAttribute="bottom" secondItem="ezo-Zc-ayz" secondAttribute="bottom" constant="403" id="05c-E4-EuY"/>
+                                            <constraint firstItem="WKb-S2-fKu" firstAttribute="trailing" secondItem="ezo-Zc-ayz" secondAttribute="trailing" id="0Dr-NN-Gf2"/>
+                                            <constraint firstItem="WKb-S2-fKu" firstAttribute="leading" secondItem="ezo-Zc-ayz" secondAttribute="leading" id="3h6-Qk-P4n"/>
+                                            <constraint firstItem="WKb-S2-fKu" firstAttribute="top" secondItem="ezo-Zc-ayz" secondAttribute="top" id="Hl3-xc-Xrc"/>
+                                            <constraint firstItem="WKb-S2-fKu" firstAttribute="width" secondItem="j7w-ve-Fw1" secondAttribute="width" id="MCd-au-uTv"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="ezo-Zc-ayz"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="j7w-ve-Fw1"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ipE-Wp-jwO" firstAttribute="leading" secondItem="YmE-SM-fPS" secondAttribute="leading" id="0ZO-3V-MWt"/>
+                                    <constraint firstAttribute="bottom" secondItem="ipE-Wp-jwO" secondAttribute="bottom" id="0r6-oi-Zld"/>
+                                    <constraint firstItem="ipE-Wp-jwO" firstAttribute="top" secondItem="YmE-SM-fPS" secondAttribute="top" id="6Ih-kV-GlE"/>
+                                    <constraint firstAttribute="height" constant="448" id="EoZ-mw-ows"/>
+                                    <constraint firstAttribute="trailing" secondItem="ipE-Wp-jwO" secondAttribute="trailing" id="tYF-6S-EJ0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YmE-SM-fPS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CtX-Hf-MgF"/>
+                            <constraint firstItem="YmE-SM-fPS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZVj-bt-rkS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YmE-SM-fPS" secondAttribute="trailing" constant="20" id="g2z-Rc-SV4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="ipE-Wp-jwO" id="w3e-ZY-jjr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.043478260869566" y="1074.1071428571429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

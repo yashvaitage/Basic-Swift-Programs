@@ -18,7 +18,7 @@ for i in 1...5{
 //-----------------------------------------------
 
 var sum = 0
-for i in 1..<6{ //loop iterate 1 to 5
+for i in 1..<10{ //loop iterate 1 to 5
     
     print("\(i)+\(sum) =") // print value of i 1-5 & sum variable stored value
     sum = sum + i // for eg 1+0, 2+1, 3+3, 4+6, 5+10
@@ -27,4 +27,6 @@ for i in 1..<6{ //loop iterate 1 to 5
 }
 
 print ("\nTotal Addition is \(sum)")
+
+------------------------------------------------------
 
